@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !default;
+
+/// text color
+/// @type Color
+$text-color: #050c33 !default;
+
+/// Paragraph font size
+/// @type Length
+$paragraph-size: 16px;
+
+/// Section heading font size
+/// @type Length
+$section-heading-size: 42px;
+
+/// Main brand color
+/// @type Color
+$brand-color: #f14d34 !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1300px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 320px,
+  "medium": 600px,
+  "bigger-medium": 800px,
+  "large": 1115px
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: "/assets/" !default;
+
+$section-block-padding: 80px;
+$section-header-gap: 20px;

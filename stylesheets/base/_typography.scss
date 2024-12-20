@@ -1,0 +1,27 @@
+@use "../abstracts";
+@use "./fonts";
+
+body {
+  color: abstracts.$text-color;
+  font-family:
+    fonts.$main-font,
+    #{abstracts.$text-font-stack};
+}
+
+p {
+  color: rgba(abstracts.$text-color, 0.7);
+}
+
+.typography-body {
+  font-size: abstracts.$paragraph-size;
+}
+
+.section-heading {
+  font-size: calc(abstracts.$section-heading-size - 16px);
+  @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+    font-size: calc(abstracts.$section-heading-size - 10px);
+  }
+  @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+    font-size: abstracts.$section-heading-size;
+  }
+}

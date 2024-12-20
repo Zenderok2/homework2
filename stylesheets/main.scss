@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use "vendors/normalize";
+
+// 2. Base stuff
+@use "base/base";
+@use "base/fonts";
+@use "base/helpers";
+@use "base/typography";
+
+// 3. Components
+@use "components/button";
+@use "components/video-background";
+@use "components/info-list";
+@use "components/navbar";
+@use "components/navbar-toggle";
+@use "components/navbar-list";
+@use "components/navbar-dropdown";
+@use "components/support-section-card";
+
+// 4. Layout-related sections
+@use "layout/section";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/navbar-desktop.scss";
+@use "layout/hero";
+@use "layout/competencies-section";
+@use "layout/support-section";
+@use "layout/expertise-section";
+@use "layout/plans-section";
+@use "layout/tasks-section";
+@use "layout/team-section";

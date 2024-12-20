@@ -1,0 +1,108 @@
+@use "../abstracts";
+.hero {
+    --title-size: 52px;
+    margin-block: 40px;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        margin-block: 130px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 55px;
+
+        @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+            align-items: initial;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .typography-body {
+                color: #ffffff;
+            }
+        }
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        &__header {
+            text-align: initial;
+        }
+    }
+
+    &__title {
+        font-size: calc(var(--title-size) - 20px);
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "medium")) {
+        &__title {
+            font-size: calc(var(--title-size) - 10px);
+        }
+    }
+    @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+        &__title {
+            font-size: var(--title-size);
+        }
+    }
+    &__achievements {
+        display: flex;
+        justify-content: center;
+
+        .info-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: stretch;
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+
+            &__item {
+                &__heading {
+                    font-size: 24px;
+                }
+
+                width: 160px;
+                padding-left: 10px;
+                position: relative;
+
+                display: flex;
+                align-items: center;
+
+                &-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    left: 0;
+                    bottom: 0;
+                    height: 90%;
+                    background-color: abstracts.$brand-color;
+                }
+            }
+
+            @media (min-width: map-get(abstracts.$breakpoints, "large")) {
+                &__item {
+                    width: 180px;
+                }
+            }
+        }
+
+        @media (min-width: calc(map-get(abstracts.$breakpoints, "medium") + 200px)) {
+            .info-list {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 100px;
+            }
+        }
+    }
+}
